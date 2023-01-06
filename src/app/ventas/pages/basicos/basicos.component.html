@@ -8,19 +8,19 @@
   <p-card header="uppercase"
   [subheader]="nombreLower">
   {{ nombreLower | uppercase}}
-</p-card>   
+</p-card>
   </div>
   <div class="col-4">
     <p-card header="lowercase"
     [subheader]="nombreLower | lowercase">
     {{ nombreLower | lowercase}}
-  </p-card>   
+  </p-card>
   </div>
   <div class="col-4">
     <p-card header="titlecase"
     [subheader]="nombreCompleto">
     {{ nombreCompleto | titlecase}}
-  </p-card>   
+  </p-card>
   </div>
 </div>
 
@@ -32,12 +32,38 @@
 <div class="grid">
   <div class="col-6">
     <p-card >
-    <ul><li>{{ fecha }}</li></ul>
-  </p-card>   
+    <ul>
+      <li> fecha </li>
+      <li> fecha | date</li>
+      <li> fecha | date:'medium'</li>
+      <li> fecha | date:'long'</li>
+      <li> fecha | date:'customdate'</li>
+      <li> fecha | date:'full'</li>
+      <li> fecha | date:'mediumTime'</li>
+    </ul>
+    <hr>
+    <ul>
+      <li>fecha | date:'long':'GMT-7'</li>
+      <li>fecha | date:'long':'GMT-10'</li>
+    </ul>
+  </p-card>
     </div>
     <div class="col-6">
       <p-card >
-        <ul><li>{{ fecha }}</li></ul>     
-    </p-card>   
+        <ul>
+          <li>{{ fecha }}</li>
+          <li>{{ fecha | date}}</li>
+          <li>{{ fecha | date:'medium'}}</li>
+          <li>{{ fecha | date:'long'}}</li>
+          <li>{{ fecha | date:'MMMM dd, yyyy'}}</li>
+          <li>{{ fecha | date:'full'}}</li>
+          <li>{{ fecha | date:'mediumTime'}}</li>
+        </ul>
+        <hr>
+        <ul>
+          <li>{{ fecha | date:'long':'GMT-7'}}</li>
+          <li>{{ fecha | date:'long':'GMT-10':'en'}}</li>
+        </ul>
+    </p-card>
       </div>
 </div>
